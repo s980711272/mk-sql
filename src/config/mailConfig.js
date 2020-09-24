@@ -23,7 +23,8 @@ async function send(sendInfo) {
     to: sendInfo.email, // list of receivers
     subject: sendInfo.user !== '' ? sendInfo.user :  `你好主宰者，这是来自合爱谷的问候`, // Subject line
     text: "Hello world?", // plain text body
-    html: "<b>Hello world?</b>", // html body
+    html: `<div>您好，您的找回密码请求已经收到，请在30分钟之内点击以下按钮验证后进行修改密码操作：</div>
+            "<div><button style="color:#409EFF;height40px;line-height:40px;">修改密码</button></div>` // html body
   });
 
   return "Message sent: %s"+ info.messageId;
